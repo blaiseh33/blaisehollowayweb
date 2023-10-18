@@ -1,9 +1,10 @@
-import 'index.scss'
+import './index.scss'
 import AnimatedLetters from '../AnimatedLetters'
 import { useEffect, useState } from 'react'
 import { faGithubSquare, faPython, faLinux, faReact } from '@fortawesome/free-brands-svg-icons'
 import { faDatabase, faFileCode } from '@fortawesome/free-solid-svg-icons'
 import Loader from 'react-loaders'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const About = () => {
 
