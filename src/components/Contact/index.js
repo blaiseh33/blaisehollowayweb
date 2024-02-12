@@ -10,12 +10,15 @@ const Contact = () => {
   const refForm = useRef()
 
   useEffect(() => {
-    return setTimeout(() => {
+    setTimeout(() => {
       setLetterClass('text-animate-hover')
     }, 3000)
   }, [])
 
   const sendEmail = (e) => {
+    document.getElementsByClassName('flat-button').disabled = true;
+    setTimeout(function(){document.getElementById("flat-button").disabled = false;},2000);
+
     e.preventDefault()
 
     emailjs.sendForm(
@@ -39,11 +42,11 @@ const Contact = () => {
       <div className='container contact-page'>
         <div className='text-zone'>
           <h1>
-            <AnimatedLetters strArray={['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'm', 'e']} 
+            <AnimatedLetters letterClass={letterClass} strArray={['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'm', 'e']} 
               idx={15}
             />
           </h1>
-          <p>
+          <p className='text-prompt'>
             I am open to any employment opportunities at the moment - if you believe I may be a good fit in your team 
             please feel free to reach out using the form below!
           </p>
@@ -63,7 +66,7 @@ const Contact = () => {
                   <textarea placeholder='Message' name='message' required />
                 </li>
                 <li>
-                  <input type="submit" className="flat-button" value="SEND" />
+                  <input type="submit" className="flat-button" value="SEND" onclick="clearFields()"/>
                 </li>
               </ul>
             </form>
@@ -72,16 +75,16 @@ const Contact = () => {
         <div className='info-map'>
           Blaise Holloway,
           <br />
-          Sherwood Park, AB,
+          Canmore, AB,
           <br />
-          Canada,
+          Canada
           <br />
           <span>blaiseh33@gmail.com</span>
         </div>
         <div className='map-wrap'>
-          <MapContainer center={[53.5279518271506, -113.29564403224339]} zoom={13}>
+          <MapContainer center={[51.0884, -115.3479]} zoom={13}>
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            <Marker position={[53.5279518271506, -113.29564403224339]}>
+            <Marker position={[51.0884, -115.3479]}>
               <Popup>Not exact location, I don't want to be stalked...</Popup>
             </Marker>
           </MapContainer>

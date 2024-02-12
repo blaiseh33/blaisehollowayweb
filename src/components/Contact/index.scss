@@ -1,3 +1,7 @@
+.text-prompt {
+  font-size: 150%;
+}
+
 .contact-form {
   width: 100%;
   margin-top: 20px;
@@ -66,6 +70,12 @@
     border: 1px solid #ffa218;
     float: right;
     border-radius: 4px;
+  }
+
+  .flat-button:hover {
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid #fff;
   }
 }
 

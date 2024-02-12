@@ -10,7 +10,7 @@ const About = () => {
 
     const [letterClass, setLetterClass] = useState('text-animate')
     useEffect(() => {
-        return setTimeout(() => {
+        setTimeout(() => {
             setLetterClass('text-animate-hover')
         }, 3000)
     }, [])
@@ -26,24 +26,26 @@ const About = () => {
                         idx={15}
                     />
                 </h1>
-                <p>
-                    I am a software developer graduating with a major in computer 
-                    science and a minor in bioinformatics from the University of Alberta
-                    in December 2023. 
-                </p>
-                <p>
-                    I have a passion for developing innovative and exciting applications 
-                    whether its in the field of machine learning and AI, or full stack web
-                    development.
-                </p>
-                <p>
-                    I strongly believe that the more knowledge I gain in the many disciplines 
-                    of computer science the better equipped I will be to tackle any task in a 
-                    specific project.
-                </p>
-                <p>
-                    
-                </p>
+                <div className='about-text'>
+                    <p>
+                        I am a software developer who graduated from the University of Alberta 
+                        with a BSc general with major in computer science and minor in bioinformatics.
+                    </p>
+                    <p>
+                        I have a passion for developing innovative and exciting applications 
+                        whether its in the field of machine learning, AI, or full stack web and app
+                        development.
+                    </p>
+                    <p>
+                        I strongly believe that the more knowledge I gain in the many disciplines 
+                        of computer science the better equipped I will be to tackle any task in a 
+                        specific project.
+                    </p>
+                    <p>
+                        If you would like to find out more about the projects I have worked on through
+                        university as well as my internship experience, check out my projects page!
+                    </p>
+                </div>
             </div>
 
             <div className='stage-cube-cont'>
